@@ -32,3 +32,41 @@ class FizzBuzz {
         }
     }
 }
+
+class FizzBuzz2 {
+
+    public static void main(String[] args) {
+        int num = 1;
+        while (num < 100) {
+            num = doFizzBuzz(num);
+        }
+    }
+
+    private static int doFizzBuzz(int num) {
+        boolean divisibleBy3 = num % 3 == 0;
+        boolean divisibleBy5 = num % 5 == 0;
+
+        if (divisibleBy3 && divisibleBy5) {
+
+            System.out.println("Fizz Buzz");
+            num++;
+
+        } else if (divisibleBy3) {
+
+            System.out.println("Fizz");
+            num++;
+
+        } else if (divisibleBy5) {
+
+            System.out.println("Buzz");
+            num++;
+
+        } else {
+
+            System.out.println(num);
+            num++;
+
+        }
+        return num;
+    }
+}
